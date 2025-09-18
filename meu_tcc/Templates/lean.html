@@ -616,19 +616,19 @@
         // Converter para JSON
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
         
-        // Extrair cabeçalhos (primeira linha)
+        // Extrair cabeçalhos (da primeira linha)
         const headers = jsonData[0].map(h => h ? String(h).trim() : '');
         console.log('✅ Colunas detectadas:', headers);
 
         // Mapeamento exato conforme sua planilha
         const mapping = {
-          PRODUTO: headers.findIndex(h => h === 'PRODUTO'),
-          'Motivo Constatado': headers.findIndex(h => h === 'Motivo Constatado'),
-          'Data Chamada': headers.findIndex(h => h === 'Data Chamada'),
-          GRUPO: headers.findIndex(h => h === 'GRUPO'),
-          VALOR_UNITARIO: headers.findIndex(h => h === 'VALOR_UNITARIO'),
-          TOTAL: headers.findIndex(h => h === 'TOTAL')
-        };
+           'PRODUTO': headers.findIndex(h => h === 'PRODUTO'),
+           'Motivo Constatado': headers.findIndex(h => h === 'Motivo Constatado'),
+           'Data Chamada': headers.findIndex(h => h === 'Data Chamada'),
+           'GRUPO': headers.findIndex(h => h === 'GRUPO'),
+           'VALOR_UNITARIO': headers.findIndex(h => h === 'VALOR_UNITARIO'),
+           'TOTAL': headers.findIndex(h => h === 'TOTAL')
+         };
 
         // Verificar se todas as colunas essenciais estão presentes
         const requiredFields = ['PRODUTO', 'Motivo Constatado', 'Data Chamada', 'GRUPO', 'TOTAL'];

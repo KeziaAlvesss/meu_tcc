@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="{{ url_for('index') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('cadastro_prod') }}">Laudo Técnico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('laudo-tecnico') }}">Laudo Técnico</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('controle_producao') }}">Controle de Produção</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('lean_six_sigma') }}">Lean Six Sigma</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('analise_preditiva') }}">Análise Preditiva</a></li>
@@ -44,7 +44,7 @@
         <h1 class="display-4 fw-bold">Plataforma de Gestão da Qualidade</h1>
         <p class="lead">Solução integrada para qualidade, produção e melhoria contínua usando Lean Six Sigma e análise de dados</p>
         <a href="#modulos" class="btn btn-hero-outline">Explorar Módulos</a> 
-        <a href="#Login/Registro" class="btn btn-hero-outline">Acessar Plataforma</a>
+        <a href="{{url_for('registrar')}}" class="btn btn-hero-outline">Acessar Plataforma</a>
     </div>
     <!-- Flash Messages -->
     <div class="container mt-3">
@@ -132,8 +132,6 @@
         </div>
     </section>
 
-    <!-- Outras seções (Dashboard e Análise Preditiva) permanecem iguais -->
-
 
     <!-- Footer -->
 <footer class="text-light py-5" style="background: linear-gradient(135deg, #003580, #002255);">
@@ -152,7 +150,7 @@
         <h5 class="text-primary-light mb-3">Links Rápidos</h5>
         <ul class="list-unstyled mb-0">
           <li class="mb-2">
-            <a href="{{ url_for('cadastro_prod') }}" class="footer-link">Laudo Técnico</a>
+            <a href="{{ url_for('laudo-tecnico') }}" class="footer-link">Laudo Técnico</a>
           </li>
           <li class="mb-2">
             <a href="{{ url_for('controle_producao') }}" class="footer-link">Controle de Produção</a>
